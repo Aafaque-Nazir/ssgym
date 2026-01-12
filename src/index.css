@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;700;900&display=swap');
+
+@theme {
+  --color-gold-400: #FFD700;
+  --color-gold-500: #E6C200;
+  --color-gold-600: #CCAD00;
+  --color-gold-glow: rgba(255, 215, 0, 0.15);
+  
+  --color-dark-950: #050505;
+  --color-dark-900: #0A0A0A;
+  --color-dark-800: #121212;
+  --color-dark-700: #1A1A1A;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+:root {
+  --neon-gold: #FFD700;
+  --deep-black: #050505;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--deep-black);
+}
+
+body {
+  background-color: var(--color-dark-950);
+  color: #E2E2E2;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar - Premium Minimalist */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--deep-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, transparent, var(--neon-gold), transparent);
+  border-radius: 10px;
+}
+
+/* Premium Utilities */
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.glass-morphism {
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bento-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-dark-900);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bento-card:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(255, 215, 0, 0.05), transparent 70%);
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
