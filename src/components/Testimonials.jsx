@@ -180,7 +180,7 @@ const Testimonials = () => {
           </AnimatePresence>
 
           {/* Controls */}
-          <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 md:bottom-auto md:left-auto md:translate-x-0 md:-right-20 md:top-1/2 md:-translate-y-1/2 flex md:flex-col gap-5 z-20">
+          <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 md:bottom-auto md:left-auto md:translate-x-0 md:-right-10 md:top-1/2 md:-translate-y-1/2 flex md:flex-col gap-5 z-20">
             <button 
               onClick={prev}
               className="w-16 h-16 rounded-full border-2 border-white/10 bg-dark-900/50 backdrop-blur-md flex items-center justify-center hover:bg-gold-400 hover:border-gold-400 hover:text-black transition-all duration-500 group shadow-2xl active:scale-90"
